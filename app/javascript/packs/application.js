@@ -3,13 +3,13 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
+
+import { Turbo } from "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-Rails.start()
-Turbolinks.start()
+
+
 ActiveStorage.start()
 
 
@@ -22,9 +22,11 @@ ActiveStorage.start()
 import "bootstrap";
 
 // Internal imports, e.g:
+import "controllers"
 // import { initSelect2 } from '../components/init_select2';
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('turbo:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+

@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container mt-5">
+  <h1 class="display-3"> Stumped! 😶</h1>
+  <p> Hone your interviewing skills with this crappy MVP</p>
+
+   <%= button_to raw("Ask me a Ruby Question"), questions_show_path(category: 'ruby'),class: 'btn btn-danger mt-2'%>
+  <%= button_to "Ask me a JavaScript Question", questions_show_path(category: 'javascript'),class: 'btn btn-warning mt-2' %>
+
+  <%= button_to "Ask me a Behavioral Question", questions_show_path(category: 'behavioral'),class: 'btn btn-primary mt-2' %>
+  <div class="mt-5">
+    <%= turbo_frame_tag "question" do %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+
+<%= turbo_stream.replace "question" do %>
+  <%= turbo_frame_tag "question"  do %>
+    <blockquote class="blockquote">
+      <p> <%= @question.body %> </p>
+    </blockquote>
+  <% end %>
+<% end %>
